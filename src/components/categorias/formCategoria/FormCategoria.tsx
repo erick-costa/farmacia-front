@@ -36,8 +36,7 @@ function FormCategoria() {
     if (id !== undefined) {
       try {
         await atualizar(`/categorias`, categoria, setCategoria)
-
-        alert("Categoria atualizada com sucesso")
+        toastAlerta("Categoria atualizada com sucesso", "sucesso")
         retornar()
       } catch (error: any) {
         toastAlerta("Erro ao atualizar a categoria", "erro")
